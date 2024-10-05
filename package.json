@@ -1,0 +1,23 @@
+{
+  "name": "node-js-rb-hw",
+  "version": "1.0.0",
+  "description": "node js rb homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vickymiziukanova/node-js-rb-hw.git"
+  },
+  "keywords": [
+    "nodejs",
+    "js"
+  ],
+  "author": "vicky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vickymiziukanova/node-js-rb-hw/issues"
+  },
+  "homepage": "https://github.com/vickymiziukanova/node-js-rb-hw#readme"
+}
