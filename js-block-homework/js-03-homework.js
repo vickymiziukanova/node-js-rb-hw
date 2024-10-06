@@ -15,7 +15,7 @@
 function delay(ms) {
     return new Promise((resolve) => {
         try {
-            setTimeout(() => resolve(), ms);
+            setTimeout(resolve, ms);
         } catch (error) {
             console.log(error);
         }
