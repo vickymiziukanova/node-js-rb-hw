@@ -26,7 +26,23 @@ VALUES
     ('de', 123, 2)
 RETURNING *;
 
-DELETE FROM Users WHERE id = 1;
+-- DELETE FROM Users WHERE id = 1;
 
 -- ALTER TABLE users ADD UNIQUE (name)
 -- ALTER TABLE users ALTER COLUMN name SET NOT NULL;
+
+CREATE TABLE IF NOT EXISTS Students (
+   id SERIAL PRIMARY KEY,
+   Name VARCHAR(100)
+);
+
+CREATE OR REPLACE PROCEDURE add_student(student_name VARCHAR)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+INSERT INTO Students (Name)
+VALUES (student_name);
+END;
+$$;
+
+CALL add_student('John Doe');
