@@ -5,11 +5,24 @@ function* generator() {
 }
 
 const generator1 = generator();
-// console.log(generator1.next().value);
-// console.log(generator1.next().value);
-// console.log(generator1.next().value);
+console.log(generator1.next().value);
+console.log(generator1.next().value);
+console.log(generator1.next().value);
 
+// if we should NOT use generator written before
 function createGenerator() {
+    let count = 1;
+    return function () {
+        if (count <= 3) {
+            return count++;
+        } else {
+            return undefined;
+        }
+    };
+}
+
+// if we should use generator written before
+function createGenerator2() {
     let count = 0;
     return function () {
         if (count <= 3) {
