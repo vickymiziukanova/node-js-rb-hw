@@ -5,9 +5,6 @@ function* generator() {
 }
 
 const generator1 = generator();
-console.log(generator1.next().value);
-console.log(generator1.next().value);
-console.log(generator1.next().value);
 
 // if we should NOT use generator written before
 function createGenerator() {
